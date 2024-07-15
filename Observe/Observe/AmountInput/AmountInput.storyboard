@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Amount Input View Controller-->
+        <scene sceneID="Q7V-2d-ZrR">
+            <objects>
+                <viewController storyboardIdentifier="AmountInputViewController" id="dUC-uf-Jqh" customClass="AmountInputViewController" customModule="StrikeCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RdX-SV-7Un">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NVJ-hO-eXT">
+                                <rect key="frame" x="0.0" y="59" width="393" height="687"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="txF-C9-0qA">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="467"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LDF-3y-Kaa">
+                                                <rect key="frame" x="76" y="169.66666666666666" width="241" height="127.99999999999997"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="241" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="ddq-GE-mMV" customClass="AmountView" customModule="StrikeCodeChallenge" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="241" height="128"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="LDF-3y-Kaa" firstAttribute="centerY" secondItem="txF-C9-0qA" secondAttribute="centerY" id="An5-Hm-44K"/>
+                                            <constraint firstItem="LDF-3y-Kaa" firstAttribute="centerX" secondItem="txF-C9-0qA" secondAttribute="centerX" id="Mgh-7p-yV2"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tAu-Zr-uIk" customClass="KeyPadView" customModule="StrikeCodeChallenge" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="487" width="393" height="200"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="qhS-Ij-KKX"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RY0-Ob-Vae" customClass="BackgroundButton" customModule="StrikeCodeChallenge" customModuleProvider="target">
+                                <rect key="frame" x="170" y="762" width="53" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="kfT-bp-nZu"/>
+                                </constraints>
+                                <state key="normal" title="Deposit"/>
+                                <connections>
+                                    <action selector="continueButtonTapped:" destination="dUC-uf-Jqh" eventType="touchUpInside" id="N0M-Hp-qdU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kzR-sw-njl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kzR-sw-njl" firstAttribute="bottom" secondItem="RY0-Ob-Vae" secondAttribute="bottom" priority="999" id="0DT-T5-Kog"/>
+                            <constraint firstItem="RY0-Ob-Vae" firstAttribute="centerX" secondItem="kzR-sw-njl" secondAttribute="centerX" id="2JT-PM-qqs"/>
+                            <constraint firstItem="NVJ-hO-eXT" firstAttribute="leading" secondItem="kzR-sw-njl" secondAttribute="leading" id="46Q-Z7-coI"/>
+                            <constraint firstItem="LDF-3y-Kaa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kzR-sw-njl" secondAttribute="leading" constant="32" id="C3l-Nq-LWk"/>
+                            <constraint firstItem="kzR-sw-njl" firstAttribute="trailing" secondItem="NVJ-hO-eXT" secondAttribute="trailing" id="Cag-il-8lk"/>
+                            <constraint firstItem="RY0-Ob-Vae" firstAttribute="top" secondItem="NVJ-hO-eXT" secondAttribute="bottom" constant="16" id="H1B-uP-dXp"/>
+                            <constraint firstItem="NVJ-hO-eXT" firstAttribute="top" secondItem="kzR-sw-njl" secondAttribute="top" id="ZM2-aG-jlg"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="RY0-Ob-Vae" secondAttribute="bottom" constant="16" id="hD8-sE-NeZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="amountContainerStackView" destination="LDF-3y-Kaa" id="54g-6F-zWA"/>
+                        <outlet property="amountView" destination="ddq-GE-mMV" id="QQf-hE-zHx"/>
+                        <outlet property="keyPadView" destination="tAu-Zr-uIk" id="xPd-68-q2d"/>
+                        <outlet property="requestButton" destination="RY0-Ob-Vae" id="2G6-Dt-Eyb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pgg-gR-4RN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38" y="29"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

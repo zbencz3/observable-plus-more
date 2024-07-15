@@ -7,16 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D784C6472C453EAE006FDB23 /* BackgroundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D784C6462C453EAE006FDB23 /* BackgroundButton.swift */; };
+		D784C6492C453ED5006FDB23 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D784C6482C453ED5006FDB23 /* Constants.swift */; };
+		D784C64B2C453F66006FDB23 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D784C64A2C453F66006FDB23 /* UIButton+Extensions.swift */; };
+		D784C64D2C453FB6006FDB23 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D784C64C2C453FB6006FDB23 /* UILabel+Extensions.swift */; };
+		D784C64F2C453FF2006FDB23 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D784C64E2C453FF2006FDB23 /* FontStyle.swift */; };
+		D784C6512C45401D006FDB23 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D784C6502C45401D006FDB23 /* UIFont+Extensions.swift */; };
+		D784C6542C4540E9006FDB23 /* UINavigationItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D784C6532C4540E9006FDB23 /* UINavigationItem+Extensions.swift */; };
+		D784C6572C4541A3006FDB23 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D784C6552C4541A2006FDB23 /* Montserrat-Bold.ttf */; };
+		D784C6582C4541A3006FDB23 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D784C6562C4541A3006FDB23 /* Montserrat-Medium.ttf */; };
+		D784C65B2C454516006FDB23 /* SwiftUINavigation in Frameworks */ = {isa = PBXBuildFile; productRef = D784C65A2C454516006FDB23 /* SwiftUINavigation */; };
+		D784C65D2C454516006FDB23 /* SwiftUINavigationCore in Frameworks */ = {isa = PBXBuildFile; productRef = D784C65C2C454516006FDB23 /* SwiftUINavigationCore */; };
+		D7B5F4272C4545C800001E96 /* Observation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5F4262C4545C800001E96 /* Observation+Extensions.swift */; };
+		D7B5F4292C45511400001E96 /* Navigation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5F4282C45511300001E96 /* Navigation+Extensions.swift */; };
+		D7B5F4332C4551C200001E96 /* AmountViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5F4322C4551C200001E96 /* AmountViewType.swift */; };
+		D7B5F4352C4551CE00001E96 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5F4342C4551CE00001E96 /* AmountView.swift */; };
+		D7B5F4372C4551DA00001E96 /* AmountInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5F4362C4551DA00001E96 /* AmountInputViewController.swift */; };
+		D7B5F43A2C45520500001E96 /* AmountInput.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7B5F4392C45520500001E96 /* AmountInput.storyboard */; };
+		D7B5F43C2C4554A500001E96 /* InputNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5F43B2C4554A500001E96 /* InputNumberFormatter.swift */; };
+		D7B5F43E2C4554D600001E96 /* KeyPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5F43D2C4554D600001E96 /* KeyPadView.swift */; };
+		D7B5F4412C45551800001E96 /* KeyPadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7B5F4402C45551800001E96 /* KeyPadView.xib */; };
+		D7B5F4452C45965B00001E96 /* BitcoinTabViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5F4442C45965B00001E96 /* BitcoinTabViewModelTests.swift */; };
 		D7F83EEA2C452E6E005935B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F83EE92C452E6E005935B0 /* AppDelegate.swift */; };
 		D7F83EEC2C452E6E005935B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F83EEB2C452E6E005935B0 /* SceneDelegate.swift */; };
-		D7F83EEE2C452E6E005935B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F83EED2C452E6E005935B0 /* ViewController.swift */; };
-		D7F83EF12C452E6E005935B0 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D7F83EF02C452E6E005935B0 /* Base */; };
 		D7F83EF42C452E6E005935B0 /* Observe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7F83EF22C452E6E005935B0 /* Observe.xcdatamodeld */; };
 		D7F83EF62C452E6F005935B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7F83EF52C452E6F005935B0 /* Assets.xcassets */; };
 		D7F83EF92C452E6F005935B0 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D7F83EF82C452E6F005935B0 /* Base */; };
 		D7F83F042C452E70005935B0 /* ObserveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F83F032C452E70005935B0 /* ObserveTests.swift */; };
 		D7F83F0E2C452E70005935B0 /* ObserveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F83F0D2C452E70005935B0 /* ObserveUITests.swift */; };
 		D7F83F102C452E70005935B0 /* ObserveUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F83F0F2C452E70005935B0 /* ObserveUITestsLaunchTests.swift */; };
+		D7F83F1D2C4537D6005935B0 /* FiatAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F83F1C2C4537D6005935B0 /* FiatAmount.swift */; };
+		D7F83F1F2C45380A005935B0 /* FiatCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F83F1E2C45380A005935B0 /* FiatCurrency.swift */; };
+		D7F83F212C45382C005935B0 /* BitcoinCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F83F202C45382C005935B0 /* BitcoinCurrency.swift */; };
+		D7F83F232C453847005935B0 /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F83F222C453847005935B0 /* NumberFormatter+Extensions.swift */; };
+		D7F83F252C453868005935B0 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F83F242C453868005935B0 /* UIColor+Extensions.swift */; };
+		D7F83F272C45399E005935B0 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F83F262C45399E005935B0 /* Service.swift */; };
+		D7F83F292C4539DC005935B0 /* BitcoinTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F83F282C4539DC005935B0 /* BitcoinTabViewController.swift */; };
+		D7F83F2B2C4539F8005935B0 /* BitcoinTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F83F2A2C4539F8005935B0 /* BitcoinTabViewModel.swift */; };
+		D7F83F2F2C453D14005935B0 /* Perception in Frameworks */ = {isa = PBXBuildFile; productRef = D7F83F2E2C453D14005935B0 /* Perception */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +65,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D784C6462C453EAE006FDB23 /* BackgroundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundButton.swift; sourceTree = "<group>"; };
+		D784C6482C453ED5006FDB23 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D784C64A2C453F66006FDB23 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		D784C64C2C453FB6006FDB23 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
+		D784C64E2C453FF2006FDB23 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
+		D784C6502C45401D006FDB23 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		D784C6532C4540E9006FDB23 /* UINavigationItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Extensions.swift"; sourceTree = "<group>"; };
+		D784C6552C4541A2006FDB23 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		D784C6562C4541A3006FDB23 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		D7B5F4262C4545C800001E96 /* Observation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observation+Extensions.swift"; sourceTree = "<group>"; };
+		D7B5F4282C45511300001E96 /* Navigation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Navigation+Extensions.swift"; sourceTree = "<group>"; };
+		D7B5F4322C4551C200001E96 /* AmountViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountViewType.swift; sourceTree = "<group>"; };
+		D7B5F4342C4551CE00001E96 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
+		D7B5F4362C4551DA00001E96 /* AmountInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountInputViewController.swift; sourceTree = "<group>"; };
+		D7B5F4392C45520500001E96 /* AmountInput.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AmountInput.storyboard; sourceTree = "<group>"; };
+		D7B5F43B2C4554A500001E96 /* InputNumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputNumberFormatter.swift; sourceTree = "<group>"; };
+		D7B5F43D2C4554D600001E96 /* KeyPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPadView.swift; sourceTree = "<group>"; };
+		D7B5F4402C45551800001E96 /* KeyPadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyPadView.xib; sourceTree = "<group>"; };
+		D7B5F4442C45965B00001E96 /* BitcoinTabViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinTabViewModelTests.swift; sourceTree = "<group>"; };
 		D7F83EE62C452E6E005935B0 /* Observe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Observe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F83EE92C452E6E005935B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7F83EEB2C452E6E005935B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D7F83EED2C452E6E005935B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D7F83EF02C452E6E005935B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7F83EF32C452E6E005935B0 /* Observe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Observe.xcdatamodel; sourceTree = "<group>"; };
 		D7F83EF52C452E6F005935B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7F83EF82C452E6F005935B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +96,14 @@
 		D7F83F092C452E70005935B0 /* ObserveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObserveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F83F0D2C452E70005935B0 /* ObserveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserveUITests.swift; sourceTree = "<group>"; };
 		D7F83F0F2C452E70005935B0 /* ObserveUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserveUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D7F83F1C2C4537D6005935B0 /* FiatAmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatAmount.swift; sourceTree = "<group>"; };
+		D7F83F1E2C45380A005935B0 /* FiatCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatCurrency.swift; sourceTree = "<group>"; };
+		D7F83F202C45382C005935B0 /* BitcoinCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinCurrency.swift; sourceTree = "<group>"; };
+		D7F83F222C453847005935B0 /* NumberFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		D7F83F242C453868005935B0 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		D7F83F262C45399E005935B0 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		D7F83F282C4539DC005935B0 /* BitcoinTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinTabViewController.swift; sourceTree = "<group>"; };
+		D7F83F2A2C4539F8005935B0 /* BitcoinTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinTabViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +111,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D784C65B2C454516006FDB23 /* SwiftUINavigation in Frameworks */,
+				D784C65D2C454516006FDB23 /* SwiftUINavigationCore in Frameworks */,
+				D7F83F2F2C453D14005935B0 /* Perception in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +134,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D784C6522C454033006FDB23 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D7F83F242C453868005935B0 /* UIColor+Extensions.swift */,
+				D7F83F222C453847005935B0 /* NumberFormatter+Extensions.swift */,
+				D784C64A2C453F66006FDB23 /* UIButton+Extensions.swift */,
+				D784C64C2C453FB6006FDB23 /* UILabel+Extensions.swift */,
+				D784C6502C45401D006FDB23 /* UIFont+Extensions.swift */,
+				D784C6532C4540E9006FDB23 /* UINavigationItem+Extensions.swift */,
+				D7B5F4262C4545C800001E96 /* Observation+Extensions.swift */,
+				D7B5F4282C45511300001E96 /* Navigation+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D7B5F4382C4551EF00001E96 /* AmountInput */ = {
+			isa = PBXGroup;
+			children = (
+				D7B5F4322C4551C200001E96 /* AmountViewType.swift */,
+				D7B5F4362C4551DA00001E96 /* AmountInputViewController.swift */,
+				D7B5F4342C4551CE00001E96 /* AmountView.swift */,
+				D7B5F4392C45520500001E96 /* AmountInput.storyboard */,
+			);
+			path = AmountInput;
+			sourceTree = "<group>";
+		};
+		D7B5F43F2C4554F500001E96 /* KeyPad */ = {
+			isa = PBXGroup;
+			children = (
+				D7B5F43D2C4554D600001E96 /* KeyPadView.swift */,
+				D7B5F4402C45551800001E96 /* KeyPadView.xib */,
+			);
+			path = KeyPad;
+			sourceTree = "<group>";
+		};
+		D7B5F4422C45957F00001E96 /* Currency */ = {
+			isa = PBXGroup;
+			children = (
+				D7F83F1C2C4537D6005935B0 /* FiatAmount.swift */,
+				D7F83F1E2C45380A005935B0 /* FiatCurrency.swift */,
+				D7F83F202C45382C005935B0 /* BitcoinCurrency.swift */,
+			);
+			path = Currency;
+			sourceTree = "<group>";
+		};
+		D7B5F4432C45962200001E96 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D784C64E2C453FF2006FDB23 /* FontStyle.swift */,
+				D784C6552C4541A2006FDB23 /* Montserrat-Bold.ttf */,
+				D784C6562C4541A3006FDB23 /* Montserrat-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		D7F83EDD2C452E6E005935B0 = {
 			isa = PBXGroup;
 			children = (
@@ -103,12 +214,20 @@
 			children = (
 				D7F83EE92C452E6E005935B0 /* AppDelegate.swift */,
 				D7F83EEB2C452E6E005935B0 /* SceneDelegate.swift */,
-				D7F83EED2C452E6E005935B0 /* ViewController.swift */,
-				D7F83EEF2C452E6E005935B0 /* Main.storyboard */,
 				D7F83EF52C452E6F005935B0 /* Assets.xcassets */,
 				D7F83EF72C452E6F005935B0 /* LaunchScreen.storyboard */,
 				D7F83EFA2C452E6F005935B0 /* Info.plist */,
 				D7F83EF22C452E6E005935B0 /* Observe.xcdatamodeld */,
+				D7B5F4422C45957F00001E96 /* Currency */,
+				D7B5F43F2C4554F500001E96 /* KeyPad */,
+				D7F83F262C45399E005935B0 /* Service.swift */,
+				D7B5F4382C4551EF00001E96 /* AmountInput */,
+				D7F83F2C2C453A0A005935B0 /* Bitcoin */,
+				D784C6462C453EAE006FDB23 /* BackgroundButton.swift */,
+				D784C6482C453ED5006FDB23 /* Constants.swift */,
+				D784C6522C454033006FDB23 /* Extensions */,
+				D7B5F4432C45962200001E96 /* Fonts */,
+				D7B5F43B2C4554A500001E96 /* InputNumberFormatter.swift */,
 			);
 			path = Observe;
 			sourceTree = "<group>";
@@ -117,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				D7F83F032C452E70005935B0 /* ObserveTests.swift */,
+				D7B5F4442C45965B00001E96 /* BitcoinTabViewModelTests.swift */,
 			);
 			path = ObserveTests;
 			sourceTree = "<group>";
@@ -128,6 +248,15 @@
 				D7F83F0F2C452E70005935B0 /* ObserveUITestsLaunchTests.swift */,
 			);
 			path = ObserveUITests;
+			sourceTree = "<group>";
+		};
+		D7F83F2C2C453A0A005935B0 /* Bitcoin */ = {
+			isa = PBXGroup;
+			children = (
+				D7F83F282C4539DC005935B0 /* BitcoinTabViewController.swift */,
+				D7F83F2A2C4539F8005935B0 /* BitcoinTabViewModel.swift */,
+			);
+			path = Bitcoin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +275,11 @@
 			dependencies = (
 			);
 			name = Observe;
+			packageProductDependencies = (
+				D7F83F2E2C453D14005935B0 /* Perception */,
+				D784C65A2C454516006FDB23 /* SwiftUINavigation */,
+				D784C65C2C454516006FDB23 /* SwiftUINavigationCore */,
+			);
 			productName = Observe;
 			productReference = D7F83EE62C452E6E005935B0 /* Observe.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +352,10 @@
 				Base,
 			);
 			mainGroup = D7F83EDD2C452E6E005935B0;
+			packageReferences = (
+				D7F83F2D2C453CFD005935B0 /* XCRemoteSwiftPackageReference "swift-perception" */,
+				D784C6592C454516006FDB23 /* XCRemoteSwiftPackageReference "swiftui-navigation" */,
+			);
 			productRefGroup = D7F83EE72C452E6E005935B0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,9 +372,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D784C6572C4541A3006FDB23 /* Montserrat-Bold.ttf in Resources */,
+				D784C6582C4541A3006FDB23 /* Montserrat-Medium.ttf in Resources */,
 				D7F83EF62C452E6F005935B0 /* Assets.xcassets in Resources */,
+				D7B5F43A2C45520500001E96 /* AmountInput.storyboard in Resources */,
+				D7B5F4412C45551800001E96 /* KeyPadView.xib in Resources */,
 				D7F83EF92C452E6F005935B0 /* Base in Resources */,
-				D7F83EF12C452E6E005935B0 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +402,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7F83EEE2C452E6E005935B0 /* ViewController.swift in Sources */,
+				D7F83F212C45382C005935B0 /* BitcoinCurrency.swift in Sources */,
+				D7F83F1D2C4537D6005935B0 /* FiatAmount.swift in Sources */,
+				D7B5F4332C4551C200001E96 /* AmountViewType.swift in Sources */,
+				D7B5F4352C4551CE00001E96 /* AmountView.swift in Sources */,
+				D7B5F4372C4551DA00001E96 /* AmountInputViewController.swift in Sources */,
 				D7F83EEA2C452E6E005935B0 /* AppDelegate.swift in Sources */,
 				D7F83EF42C452E6E005935B0 /* Observe.xcdatamodeld in Sources */,
+				D7B5F4292C45511400001E96 /* Navigation+Extensions.swift in Sources */,
+				D784C6542C4540E9006FDB23 /* UINavigationItem+Extensions.swift in Sources */,
+				D7F83F1F2C45380A005935B0 /* FiatCurrency.swift in Sources */,
+				D784C64F2C453FF2006FDB23 /* FontStyle.swift in Sources */,
+				D7F83F232C453847005935B0 /* NumberFormatter+Extensions.swift in Sources */,
+				D7F83F2B2C4539F8005935B0 /* BitcoinTabViewModel.swift in Sources */,
+				D7B5F4272C4545C800001E96 /* Observation+Extensions.swift in Sources */,
+				D784C6472C453EAE006FDB23 /* BackgroundButton.swift in Sources */,
+				D7F83F292C4539DC005935B0 /* BitcoinTabViewController.swift in Sources */,
+				D7F83F272C45399E005935B0 /* Service.swift in Sources */,
+				D784C6492C453ED5006FDB23 /* Constants.swift in Sources */,
+				D784C64D2C453FB6006FDB23 /* UILabel+Extensions.swift in Sources */,
+				D7B5F43E2C4554D600001E96 /* KeyPadView.swift in Sources */,
 				D7F83EEC2C452E6E005935B0 /* SceneDelegate.swift in Sources */,
+				D784C64B2C453F66006FDB23 /* UIButton+Extensions.swift in Sources */,
+				D784C6512C45401D006FDB23 /* UIFont+Extensions.swift in Sources */,
+				D7B5F43C2C4554A500001E96 /* InputNumberFormatter.swift in Sources */,
+				D7F83F252C453868005935B0 /* UIColor+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7F83F042C452E70005935B0 /* ObserveTests.swift in Sources */,
+				D7B5F4452C45965B00001E96 /* BitcoinTabViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +464,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D7F83EEF2C452E6E005935B0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D7F83EF02C452E6E005935B0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D7F83EF72C452E6F005935B0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -451,9 +606,8 @@
 				INFOPLIST_FILE = Observe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,9 +615,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sylva.Observe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -479,9 +638,8 @@
 				INFOPLIST_FILE = Observe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -489,9 +647,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sylva.Observe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -611,6 +774,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D784C6592C454516006FDB23 /* XCRemoteSwiftPackageReference "swiftui-navigation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swiftui-navigation";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+		D7F83F2D2C453CFD005935B0 /* XCRemoteSwiftPackageReference "swift-perception" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-perception";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D784C65A2C454516006FDB23 /* SwiftUINavigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D784C6592C454516006FDB23 /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
+			productName = SwiftUINavigation;
+		};
+		D784C65C2C454516006FDB23 /* SwiftUINavigationCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D784C6592C454516006FDB23 /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
+			productName = SwiftUINavigationCore;
+		};
+		D7F83F2E2C453D14005935B0 /* Perception */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D7F83F2D2C453CFD005935B0 /* XCRemoteSwiftPackageReference "swift-perception" */;
+			productName = Perception;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D7F83EF22C452E6E005935B0 /* Observe.xcdatamodeld */ = {

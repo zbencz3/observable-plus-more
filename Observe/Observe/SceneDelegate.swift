@@ -11,12 +11,35 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        let service = Service(
+            prepaidBalance: Amount<AnyCurrency>(amount: 7680, currency: .usd),
+            bitcoinBalance: Amount<AnyCurrency>(amount: 1.2, currency: .btc)
+        )
+        #warning("Deep linking made easy")
+        /// Specify the destination if you want to jump to a screen directly, e.g. to an alert or trading screen, multi level down to the hierarchy.
+        /// Perfect for deep links, etc.
+        /// Uncomment the following to try it out for the buy screen:
+        /*let bitcoinTabViewModel = BitcoinTabViewModel(
+            service: service,
+            destination: .trade(
+                direction: .buy,
+                sourceCurrency: .usd,
+                destinationCurrency: .btc
+            )
+        )*/
+        let bitcoinTabViewModel = BitcoinTabViewModel(service: service)
+        let viewController = BitcoinTabViewController(viewModel: bitcoinTabViewModel)
+        let navigationController = UINavigationController(rootViewController: viewController)
+        
+        self.window = UIWindow(windowScene: windowScene)
+        self.window?.rootViewController = navigationController
+        self.window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -49,7 +72,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
-
-
 }
-
