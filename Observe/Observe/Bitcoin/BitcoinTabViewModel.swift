@@ -7,6 +7,7 @@
 
 import UIKit
 import Perception
+import CasePaths
 
 struct Balance {
     let fiat: Amount<AnyCurrency>
@@ -24,20 +25,54 @@ enum Direction {
     case sell
 }
 
-enum Destination: Equatable {
-    case trade(direction: Direction, sourceCurrency: AnyCurrency, destinationCurrency: AnyCurrency)
-    case alert(title: String, message: String)
-}
-
 @MainActor
 @Perceptible
-final class BitcoinTabViewModel: NSObject {
+final class BitcoinTabViewModel {
     let service: Service
     var balance: Balance
     var exchangeRate: Decimal
     #warning("Destination: makes sure you don't have invalid states, like if you were to use separate vars")
     /// Navigation destinations - nil means we are back to ourselves
     var destination: Destination?
+    
+    @CasePathable
+    enum Destination: Equatable {
+        case trade(Trade)
+        case alert(Alert)
+    }
+
+    struct Trade: Identifiable, Equatable {
+        var id: String {
+            "\(direction)-\(sourceCurrency)-\(destinationCurrency)"
+        }
+        let direction: Direction
+        let sourceCurrency: AnyCurrency
+        let destinationCurrency: AnyCurrency
+        
+        init(
+            direction: Direction,
+            sourceCurrency: AnyCurrency,
+            destinationCurrency: AnyCurrency
+        ) {
+            self.direction = direction
+            self.sourceCurrency = sourceCurrency
+            self.destinationCurrency = destinationCurrency
+        }
+    }
+
+    struct Alert: Identifiable, Equatable {
+        var id: String { "\(title)-\(message)" }
+        let title: String
+        let message: String
+        
+        init(
+            title: String,
+            message: String
+        ) {
+            self.title = title
+            self.message = message
+        }
+    }
     
     init(
         service: Service,
@@ -47,7 +82,6 @@ final class BitcoinTabViewModel: NSObject {
         self.destination = destination
         self.balance = .zeroBalance(currency: .usd)
         self.exchangeRate = service.exchangeRate
-        super.init()
         
         observe { [weak self] in
             guard let self else { return }
@@ -61,22 +95,36 @@ final class BitcoinTabViewModel: NSObject {
     }
     
     func buyButtonTapped() {
-        destination = .trade(direction: .buy, sourceCurrency: .usd, destinationCurrency: .btc)
+        destination = .trade(
+            Trade(
+                direction: .buy,
+                sourceCurrency: .usd,
+                destinationCurrency: .btc
+            )
+        )
     }
     
     func sellButtonTapped() {
-        destination = .trade(direction: .sell, sourceCurrency: .usd, destinationCurrency: .btc)
+        destination = .trade(
+            Trade(
+                direction: .sell,
+                sourceCurrency: .usd,
+                destinationCurrency: .btc
+            )
+        )
     }
     
     func tradingBitcoinSucceeded() async {
         destination = nil
         
         /// Looks like cannot switch to a new destination immediately :sad
-        try? await Task.sleep(for: .seconds(2))
+        try? await Task.sleep(for: .seconds(0.5))
         
         destination = .alert(
-            title: "Trade Succeeded",
-            message: "Bitcoin trade succeeded."
+            Alert(
+                title: "Trade Succeeded",
+                message: "Bitcoin trade succeeded."
+            )
         )
     }
     
@@ -84,11 +132,13 @@ final class BitcoinTabViewModel: NSObject {
         destination = nil
         
         /// Looks like cannot switch to a new destination immediately :sad
-        try? await Task.sleep(for: .seconds(2))
+        try? await Task.sleep(for: .seconds(0.5))
         
         destination = .alert(
-            title: "Trade Failed",
-            message: "Bitcoin trade failed. Please try again or contact customer support."
+            Alert(
+                title: "Trade Failed",
+                message: "Bitcoin trade failed. Please try again or contact customer support."
+            )
         )
     }
     

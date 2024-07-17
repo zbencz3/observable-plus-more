@@ -5,9 +5,9 @@
 //  Created by Zsolt Bencze on 15.07.2024.
 //
 
-import UIKit
 import Perception
 import SwiftUINavigation
+@preconcurrency import SwiftUI
 
 class BitcoinTabViewController: UIViewController {
     private var collectionView: UICollectionView!
@@ -15,7 +15,7 @@ class BitcoinTabViewController: UIViewController {
     private lazy var buyButton = BackgroundButton()
     private lazy var sellButton = BackgroundButton()
     
-    private let viewModel: BitcoinTabViewModel
+    @UIBindable var viewModel: BitcoinTabViewModel
 
     init(viewModel: BitcoinTabViewModel) {
         self.viewModel = viewModel
@@ -76,40 +76,39 @@ class BitcoinTabViewController: UIViewController {
             self.renderBalance(balance: viewModel.balance)
             self.renderExchangerate(exchangeRate: viewModel.exchangeRate, balance: viewModel.balance)
             
-            present(item: viewModel.destination) { [viewModel] destination in
-                switch destination {
-                case .trade(let direction, let sourceCurrency, _):
-                    let amountInputViewController = AmountInputViewController.instantiate(currency: sourceCurrency) { [viewModel] viewController, amount, completion in
-                        /// Since we only have the BTC tab we can ignore the destination currency and trade bitcoin.
-                        viewModel.service.tradeBitcoin(amount: amount, direction: direction) { result in
-                            switch result {
-                            case .success(_):
-                                Task {
-                                    await viewModel.tradingBitcoinSucceeded()
-                                }
-                            case .failure(_):
-                                Task {
-                                    await viewModel.tradingBitcoinFailed()
-                                }
+            present(item: $viewModel.destination.trade) { trade in
+                let amountInputViewController = AmountInputViewController.instantiate(currency: trade.sourceCurrency) { [viewModel = self.viewModel] viewController, amount, completion in
+                    /// Since we only have the BTC tab we can ignore the destination currency and trade bitcoin.
+                    viewModel.service.tradeBitcoin(amount: amount, direction: trade.direction) { result in
+                        switch result {
+                        case .success(_):
+                            Task {
+                                await viewModel.tradingBitcoinSucceeded()
                             }
-                            completion()
+                        case .failure(_):
+                            Task {
+                                await viewModel.tradingBitcoinFailed()
+                            }
                         }
+                        completion()
                     }
-                    amountInputViewController.cancelBlock = {
-                        viewModel.tradeCancelled()
-                    }
-                    return UINavigationController(rootViewController: amountInputViewController)
-                case .alert(let title, let message):
-                    let alertController = UIAlertController(
-                        title: title,
-                        message: message,
-                        preferredStyle: .alert
-                    )
-                    alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-                        viewModel.didTapAlertOKButton()
-                    }))
-                    return alertController
                 }
+                amountInputViewController.cancelBlock = { [weak self] in
+                    self?.viewModel.tradeCancelled()
+                }
+                return UINavigationController(rootViewController: amountInputViewController)
+            }
+            
+            present(item: $viewModel.destination.alert) { alert in
+                let alertController = UIAlertController(
+                    title: alert.title,
+                    message: alert.message,
+                    preferredStyle: .alert
+                )
+                alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self] _ in
+                    self?.viewModel.didTapAlertOKButton()
+                }))
+                return alertController
             }
         }
     }

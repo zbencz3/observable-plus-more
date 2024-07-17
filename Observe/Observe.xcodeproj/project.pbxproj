@@ -28,12 +28,12 @@
 		D7B5F43E2C4554D600001E96 /* KeyPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5F43D2C4554D600001E96 /* KeyPadView.swift */; };
 		D7B5F4412C45551800001E96 /* KeyPadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7B5F4402C45551800001E96 /* KeyPadView.xib */; };
 		D7B5F4452C45965B00001E96 /* BitcoinTabViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5F4442C45965B00001E96 /* BitcoinTabViewModelTests.swift */; };
+		D7B5F4472C46F4AE00001E96 /* UIBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5F4462C46F4AE00001E96 /* UIBinding.swift */; };
 		D7F83EEA2C452E6E005935B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F83EE92C452E6E005935B0 /* AppDelegate.swift */; };
 		D7F83EEC2C452E6E005935B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F83EEB2C452E6E005935B0 /* SceneDelegate.swift */; };
 		D7F83EF42C452E6E005935B0 /* Observe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7F83EF22C452E6E005935B0 /* Observe.xcdatamodeld */; };
 		D7F83EF62C452E6F005935B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7F83EF52C452E6F005935B0 /* Assets.xcassets */; };
 		D7F83EF92C452E6F005935B0 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D7F83EF82C452E6F005935B0 /* Base */; };
-		D7F83F042C452E70005935B0 /* ObserveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F83F032C452E70005935B0 /* ObserveTests.swift */; };
 		D7F83F0E2C452E70005935B0 /* ObserveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F83F0D2C452E70005935B0 /* ObserveUITests.swift */; };
 		D7F83F102C452E70005935B0 /* ObserveUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F83F0F2C452E70005935B0 /* ObserveUITestsLaunchTests.swift */; };
 		D7F83F1D2C4537D6005935B0 /* FiatAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F83F1C2C4537D6005935B0 /* FiatAmount.swift */; };
@@ -84,6 +84,7 @@
 		D7B5F43D2C4554D600001E96 /* KeyPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPadView.swift; sourceTree = "<group>"; };
 		D7B5F4402C45551800001E96 /* KeyPadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyPadView.xib; sourceTree = "<group>"; };
 		D7B5F4442C45965B00001E96 /* BitcoinTabViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinTabViewModelTests.swift; sourceTree = "<group>"; };
+		D7B5F4462C46F4AE00001E96 /* UIBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBinding.swift; sourceTree = "<group>"; };
 		D7F83EE62C452E6E005935B0 /* Observe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Observe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F83EE92C452E6E005935B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7F83EEB2C452E6E005935B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,7 +93,6 @@
 		D7F83EF82C452E6F005935B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7F83EFA2C452E6F005935B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7F83EFF2C452E70005935B0 /* ObserveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObserveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7F83F032C452E70005935B0 /* ObserveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserveTests.swift; sourceTree = "<group>"; };
 		D7F83F092C452E70005935B0 /* ObserveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObserveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F83F0D2C452E70005935B0 /* ObserveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserveUITests.swift; sourceTree = "<group>"; };
 		D7F83F0F2C452E70005935B0 /* ObserveUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserveUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -145,6 +145,7 @@
 				D784C6532C4540E9006FDB23 /* UINavigationItem+Extensions.swift */,
 				D7B5F4262C4545C800001E96 /* Observation+Extensions.swift */,
 				D7B5F4282C45511300001E96 /* Navigation+Extensions.swift */,
+				D7B5F4462C46F4AE00001E96 /* UIBinding.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -235,7 +236,6 @@
 		D7F83F022C452E70005935B0 /* ObserveTests */ = {
 			isa = PBXGroup;
 			children = (
-				D7F83F032C452E70005935B0 /* ObserveTests.swift */,
 				D7B5F4442C45965B00001E96 /* BitcoinTabViewModelTests.swift */,
 			);
 			path = ObserveTests;
@@ -411,6 +411,7 @@
 				D7F83EF42C452E6E005935B0 /* Observe.xcdatamodeld in Sources */,
 				D7B5F4292C45511400001E96 /* Navigation+Extensions.swift in Sources */,
 				D784C6542C4540E9006FDB23 /* UINavigationItem+Extensions.swift in Sources */,
+				D7B5F4472C46F4AE00001E96 /* UIBinding.swift in Sources */,
 				D7F83F1F2C45380A005935B0 /* FiatCurrency.swift in Sources */,
 				D784C64F2C453FF2006FDB23 /* FontStyle.swift in Sources */,
 				D7F83F232C453847005935B0 /* NumberFormatter+Extensions.swift in Sources */,
@@ -434,7 +435,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7F83F042C452E70005935B0 /* ObserveTests.swift in Sources */,
 				D7B5F4452C45965B00001E96 /* BitcoinTabViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

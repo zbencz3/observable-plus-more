@@ -36,13 +36,13 @@ final class BitcoinTabViewModelTests: XCTestCase {
     @MainActor
     func testBuyButton() throws {
         subject.buyButtonTapped()
-        XCTAssertTrue(subject.destination == .trade(direction: .buy, sourceCurrency: .usd, destinationCurrency: .btc))
+        XCTAssertTrue(subject.destination == .trade(BitcoinTabViewModel.Trade(direction: .buy, sourceCurrency: .usd, destinationCurrency: .btc)))
     }
     
     @MainActor
     func testSellButton() throws {
         subject.sellButtonTapped()
-        XCTAssertTrue(subject.destination == .trade(direction: .sell, sourceCurrency: .usd, destinationCurrency: .btc))
+        XCTAssertTrue(subject.destination == .trade(BitcoinTabViewModel.Trade(direction: .sell, sourceCurrency: .usd, destinationCurrency: .btc)))
     }
     
     @MainActor
