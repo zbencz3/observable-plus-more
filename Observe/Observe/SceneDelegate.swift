@@ -24,13 +24,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         #warning("Deep linking made easy")
         /// Specify the destination if you want to jump to a screen directly, e.g. to an alert or trading screen, multi level down to the hierarchy.
         /// Perfect for deep links, etc.
-        /// Uncomment the following to try it out for the buy screen:
+        /// Uncomment the following code to try out jumping directory to the buy screen:
         /*let bitcoinTabViewModel = BitcoinTabViewModel(
             service: service,
             destination: .trade(
-                direction: .buy,
-                sourceCurrency: .usd,
-                destinationCurrency: .btc
+                BitcoinTabViewModel.Trade(
+                    direction: .buy,
+                    sourceCurrency: .usd,
+                    destinationCurrency: .btc
+                )
             )
         )*/
         let bitcoinTabViewModel = BitcoinTabViewModel(service: service)
