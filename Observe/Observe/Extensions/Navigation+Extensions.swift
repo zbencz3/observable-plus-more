@@ -27,7 +27,9 @@ extension UIViewController {
                         }
                     }
                     presented[item] = Presented(controller: controller, id: unwrappedItem.id)
-                    present(controller, animated: true)
+                    Task {
+                        self.present(controller, animated: true)
+                    }
                 }
                 if let presented = presented[item] {
                     guard AnyHashable(unwrappedItem.id) != presented.id

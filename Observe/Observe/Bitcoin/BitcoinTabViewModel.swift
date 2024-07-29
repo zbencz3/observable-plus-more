@@ -116,10 +116,6 @@ final class BitcoinTabViewModel {
     
     func tradingBitcoinSucceeded() async {
         destination = nil
-        
-        /// Looks like cannot switch to a new destination immediately :sad
-        try? await Task.sleep(for: .seconds(0.5))
-        
         destination = .alert(
             Alert(
                 title: "Trade Succeeded",
@@ -130,10 +126,6 @@ final class BitcoinTabViewModel {
     
     func tradingBitcoinFailed() async {
         destination = nil
-        
-        /// Looks like cannot switch to a new destination immediately :sad
-        try? await Task.sleep(for: .seconds(0.5))
-        
         destination = .alert(
             Alert(
                 title: "Trade Failed",
